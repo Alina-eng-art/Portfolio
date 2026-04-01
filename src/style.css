@@ -1,0 +1,297 @@
+/* ========================= FONT ========================= */
+
+@font-face{
+  font-family: 'Benzin';
+  src: url('./assets/Benzin-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* ========================= RESET ========================= */
+
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+}
+
+html, body{
+  width:100%;
+  height:100%;
+  font-family:'Benzin', sans-serif;
+  overflow-x:hidden;
+}
+
+img{
+  max-width:100%;
+  height:auto;
+  display:block;
+}
+
+/* ========================= HERO ========================= */
+
+.hero{
+  width:100%;
+  min-height:100vh;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  background: linear-gradient(180deg, #ffc0cb, #ffe4e1);
+}
+
+.hero-container{
+  width:90%;
+  max-width:1200px;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:40px;
+}
+
+/* ========================= TEXT ========================= */
+
+.hero-content{
+  max-width:520px;
+}
+
+.hero-content h1{
+  font-size:72px;
+  line-height:1.1;
+  color:#ff7f7f;
+}
+
+.subtitle{
+  margin-top:10px;
+  color:#777;
+}
+
+.description{
+  margin-top:20px;
+  line-height:1.6;
+  color:#444;
+}
+
+/* ========================= BUTTON ========================= */
+
+.hero-btn{
+  margin-top:25px;
+  padding:14px 30px;
+  background:#ff7f7f;
+  color:white;
+  border:none;
+  border-radius:6px;
+  cursor:pointer;
+  font-weight:600;
+  transition:0.3s;
+
+  display:block;
+  margin-left:auto;
+  margin-right:auto;
+}
+
+.hero-btn:hover{
+  background:#c70000;
+  transform:scale(1.05);
+}
+
+/* ========================= IMAGE BLOCK ========================= */
+
+.hero-image{
+  position:relative;
+  width:600px;
+  height:600px;
+}
+
+/* ГЛАВНАЯ */
+.main-photo{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  position:absolute;
+  top:50%;
+  left:80%;
+  transform:translate(-50%, -50%);
+  border-radius:20px;
+  box-shadow:0 20px 40px rgba(0,0,0,0.25);
+  z-index:2;
+}
+
+/* МАЛЕНЬКИЕ */
+.photo{
+  position:absolute;
+  width:200px;
+  border-radius:15px;
+  box-shadow:0 10px 30px rgba(0,0,0,0.2);
+  transition:0.3s;
+  z-index:3;
+}
+
+.photo:hover{
+  transform:scale(1.1);
+}
+
+/* ВОКРУГ */
+.photo1{
+  top:-130px;
+  left:80%;
+  transform:translateX(-50%);
+}
+
+.photo2{
+  top:50%;
+  right:-300px;
+  transform:translateY(-50%);
+}
+
+.photo3{
+  bottom:-150px;
+  left:80%;
+  transform:translateX(-50%);
+}
+
+.photo4{
+  top:50%;
+  left:50px;
+  transform:translateY(-50%);
+}
+
+/* ========================= ADAPTIVE ========================= */
+
+@media (max-width:1024px){
+  .hero-container{
+    flex-direction:column;
+    text-align:center;
+  }
+
+  .hero-content h1{
+    font-size:56px;
+  }
+}
+
+@media (max-width:768px){
+
+  .hero-image{
+    width:260px;
+    height:260px;
+  }
+
+  .photo{
+    width:70px;
+  }
+
+  .photo1{ top:-10px; }
+  .photo2{ right:-10px; }
+  .photo3{ bottom:-10px; }
+  .photo4{ left:-10px; }
+}
+
+/* ========================= PORTFOLIO ========================= */
+
+.portfolio-section {
+  padding: 80px 20px;
+  background: linear-gradient(180deg, #ffe4e1, #ffc0cb);
+  width: 100%;
+  min-height: 100vh;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+}
+
+.portfolio-section h2 {
+  text-align: center;
+  font-size: 36px;
+  margin-bottom: 20px;
+  color: #c40000;
+}
+
+.portfolio-subtitle {
+  text-align: center;
+  max-width: 600px;
+}
+
+/* GRID */
+.portfolio-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 40px;
+  max-width: 800px;
+  width:100%;
+  margin-top:30px;
+}
+
+/* CARD */
+.project-card {
+  padding: 20px;
+  border-radius: 16px;
+  background: linear-gradient(135deg, #ff7f7f, #ffffff);
+  box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+  text-align:center;
+  cursor:pointer;
+  transition: 0.3s;
+
+  min-height:380px;
+}
+
+.project-card:hover {
+  transform: translateY(-10px) scale(1.03);
+}
+
+.project-card-title {
+  font-size: 24px;
+  margin-bottom: 15px;
+  color: #ffffff;
+}
+
+.project-card-text {
+  font-size: 16px;
+}
+
+/* IMAGE */
+.project-card-image {
+  width: 100%;
+  border-radius: 12px;
+  margin-top: 10px;
+}
+
+/* BUTTONS */
+.project-buttons {
+  display:flex;
+  justify-content:space-between;
+  gap:15px;
+  margin-top:15px;
+}
+
+.project-buttons button {
+  flex:1;
+  padding:10px;
+  border:none;
+  border-radius:8px;
+  cursor:pointer;
+  font-weight:bold;
+  transition:0.3s;
+}
+
+.project-buttons button:first-child {
+  background:#fff;
+  color:#c40000;
+}
+
+.project-buttons button:first-child:hover {
+  background:#ffe5e5;
+}
+
+.project-buttons button:last-child {
+  background:#ff7f7f;
+  color:#fff;
+}
+
+.project-buttons button:last-child:hover {
+  background:#8b0000;
+}
+
+/* MOBILE */
+@media (max-width:768px){
+  .portfolio-grid {
+    grid-template-columns:1fr;
+  }
+}
