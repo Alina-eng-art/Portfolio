@@ -1,8 +1,19 @@
-// src/main.js
-import { createApp } from 'vue'
-import App from './App.vue'
-import router from './router/index.js'
+import { createRouter, createWebHashHistory } from 'vue-router'
+import Home from '../views/Home.vue'
+import About from '../components/About.vue'
+import Projects from '../components/PortfolioGallery.vue'
+import Contact from '../components/ContactForm.vue'
 
-const app = createApp(App)
-app.use(router)
-app.mount('#app')
+const routes = [
+  { path: '/', component: Home },
+  { path: '/about', component: About },
+  { path: '/projects', component: Projects },
+  { path: '/contact', component: Contact },
+]
+
+const router = createRouter({
+  history: createWebHashHistory(), // 👈 ВАЖНО
+  routes
+})
+
+export default router

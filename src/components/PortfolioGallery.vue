@@ -23,7 +23,7 @@
         description="Персональний сайт портфоліо"
         image="https://picsum.photos/401/200"
         tech="Vue • Router • UI"
-        link="https://example.com"
+        link="https://alina-eng-art.github.io/Portfolio/"
         github="https://github.com/your-repo"
       />
 
