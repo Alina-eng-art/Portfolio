@@ -3,17 +3,16 @@
     
     <h2>Мої роботи</h2>
 
-    <!-- 🔥 НОВОЕ: описание -->
     <p class="portfolio-subtitle">
       Ось деякі з моїх останніх проєктів. Натисніть, щоб дізнатись більше
     </p>
 
     <div class="portfolio-grid">
       <ProjectCard
-        title="Landing Page"
-        description="Сучасний landing page на Vue"
+        title="404: Junior Found"
+        description="Dev Journey / Шлях розробника"
         image="https://picsum.photos/401/200"
-        tech="Vue • CSS • Vite"
+        tech="HTML • CSS • JS"
         link="https://alina-eng-art.github.io/404-Junior-Found/"
         github="https://github.com/your-repo"
       />
@@ -28,10 +27,10 @@
       />
 
       <ProjectCard
-        title="Shop UI"
-        description="Інтерфейс інтернет-магазину"
+        title="Simple Calc"
+        description="Рахуй швидко та без помилок"
         image="https://picsum.photos/402/200"
-        tech="Vue • API • CSS"
+        tech="HTML • JS • CSS"
         link="https://alina-eng-art.github.io/Calculator/"
         github="https://github.com/your-repo"
       />
@@ -46,7 +45,6 @@
       />
     </div>
 
-    <!-- 🔥 НОВОЕ: CTA -->
     <div class="portfolio-cta">
       <p>Хочете такий сайт? Зв’яжіться зі мною</p>
       <button class="hero-btn">Написати</button>

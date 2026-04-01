@@ -1,5 +1,4 @@
 /* ========================= FONT ========================= */
-
 @font-face{
   font-family: 'Benzin';
   src: url('./assets/Benzin-Regular.ttf') format('truetype');
@@ -8,7 +7,6 @@
 }
 
 /* ========================= RESET ========================= */
-
 *{
   margin:0;
   padding:0;
@@ -17,9 +15,15 @@
 
 html, body{
   width:100%;
-  height:100%;
+  min-height:100%;
   font-family:'Benzin', sans-serif;
   overflow-x:hidden;
+
+  /* Плавный скролл */
+  scroll-behavior: smooth;
+
+  /* Snap для всех секций */
+  scroll-snap-type: y mandatory;
 }
 
 img{
@@ -29,7 +33,6 @@ img{
 }
 
 /* ========================= HERO ========================= */
-
 .hero{
   width:100%;
   min-height:100vh;
@@ -37,6 +40,9 @@ img{
   align-items:center;
   justify-content:center;
   background: linear-gradient(180deg, #ffc0cb, #ffe4e1);
+
+  /* Snap */
+  scroll-snap-align: start;
 }
 
 .hero-container{
@@ -48,8 +54,7 @@ img{
   gap:40px;
 }
 
-/* ========================= TEXT ========================= */
-
+/* Текст */
 .hero-content{
   max-width:520px;
 }
@@ -71,8 +76,7 @@ img{
   color:#444;
 }
 
-/* ========================= BUTTON ========================= */
-
+/* Кнопка */
 .hero-btn{
   margin-top:25px;
   padding:14px 30px;
@@ -83,7 +87,6 @@ img{
   cursor:pointer;
   font-weight:600;
   transition:0.3s;
-
   display:block;
   margin-left:auto;
   margin-right:auto;
@@ -94,15 +97,13 @@ img{
   transform:scale(1.05);
 }
 
-/* ========================= IMAGE BLOCK ========================= */
-
+/* Изображения */
 .hero-image{
   position:relative;
   width:600px;
   height:600px;
 }
 
-/* ГЛАВНАЯ */
 .main-photo{
   width:100%;
   height:100%;
@@ -116,7 +117,6 @@ img{
   z-index:2;
 }
 
-/* МАЛЕНЬКИЕ */
 .photo{
   position:absolute;
   width:200px;
@@ -130,9 +130,8 @@ img{
   transform:scale(1.1);
 }
 
-/* ВОКРУГ */
 .photo1{
-  top:-130px;
+  top:-170px;
   left:80%;
   transform:translateX(-50%);
 }
@@ -144,7 +143,7 @@ img{
 }
 
 .photo3{
-  bottom:-150px;
+  bottom:-160px;
   left:80%;
   transform:translateX(-50%);
 }
@@ -155,8 +154,7 @@ img{
   transform:translateY(-50%);
 }
 
-/* ========================= ADAPTIVE ========================= */
-
+/* ========================= ADAPTIVE HERO ========================= */
 @media (max-width:1024px){
   .hero-container{
     flex-direction:column;
@@ -169,24 +167,35 @@ img{
 }
 
 @media (max-width:768px){
+  .hero-container{
+    flex-direction:column;
+    text-align:center;
+  }
+
+  .hero-content h1{
+    font-size:48px;
+  }
 
   .hero-image{
     width:260px;
     height:260px;
+    position:relative;
+  }
+
+  .main-photo{
+    width:100%;
+    height:100%;
+    position:static;
+    transform:none;
+    object-fit:cover;
   }
 
   .photo{
-    width:70px;
+    display:none;
   }
-
-  .photo1{ top:-10px; }
-  .photo2{ right:-10px; }
-  .photo3{ bottom:-10px; }
-  .photo4{ left:-10px; }
 }
 
 /* ========================= PORTFOLIO ========================= */
-
 .portfolio-section {
   padding: 80px 20px;
   background: linear-gradient(180deg, #ffe4e1, #ffc0cb);
@@ -195,6 +204,9 @@ img{
   display:flex;
   flex-direction:column;
   align-items:center;
+
+  /* Snap */
+  scroll-snap-align: start;
 }
 
 .portfolio-section h2 {
@@ -209,7 +221,6 @@ img{
   max-width: 600px;
 }
 
-/* GRID */
 .portfolio-grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -219,7 +230,23 @@ img{
   margin-top:30px;
 }
 
-/* CARD */
+.portfolio-cta {
+  text-align: center; /* Центрируем текст и кнопку */
+  margin-top: 40px;   /* Отступ сверху, можно менять число */
+}
+
+.portfolio-cta p {
+ text-align: center;
+  max-width: 600px;
+  color: #000000;
+}
+
+.portfolio-cta .hero-btn {
+  padding: 15px 20px;
+  font-size: 15px;
+}
+
+
 .project-card {
   padding: 20px;
   border-radius: 16px;
@@ -228,7 +255,6 @@ img{
   text-align:center;
   cursor:pointer;
   transition: 0.3s;
-
   min-height:380px;
 }
 
@@ -246,14 +272,12 @@ img{
   font-size: 16px;
 }
 
-/* IMAGE */
 .project-card-image {
   width: 100%;
   border-radius: 12px;
   margin-top: 10px;
 }
 
-/* BUTTONS */
 .project-buttons {
   display:flex;
   justify-content:space-between;
@@ -289,9 +313,149 @@ img{
   background:#8b0000;
 }
 
-/* MOBILE */
 @media (max-width:768px){
   .portfolio-grid {
     grid-template-columns:1fr;
   }
 }
+
+/* ========================= ABOUT ========================= */
+.about {
+  padding: 80px 10%;
+  min-height: 100vh;
+  background: linear-gradient(180deg, #ffc0cb, #ffe4e1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  scroll-snap-align: start;
+}
+
+.about-container {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 60px;
+  width: 100%;
+  max-width: 1200px;
+}
+
+.about-left {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.about-text h2 {
+  font-size: 36px;
+  color: #c40000;
+  margin-bottom: 10px;
+}
+
+.about-text h2::after {
+  content: '';
+  display: block;
+  width: 60px;
+  height: 4px;
+  background: linear-gradient(90deg, #ff7f7f, #ffb6c1);
+  margin-top: 10px;
+  border-radius: 2px;
+}
+
+.about-text p {
+  font-size: 16px;
+  line-height: 1.7;
+  color: #555;
+}
+
+.about-bottom {
+  display: flex;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+
+.skills-container {
+  flex: 1;
+}
+
+.skills-container h3 {
+  font-size: 24px;
+  color: #c40000;
+  margin-bottom: 10px;
+}
+
+.skills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.skill {
+  padding: 10px 20px;
+  border-radius: 25px;
+  background: linear-gradient(135deg, #ff7f7f, #ffb6c1);
+  color: #fff;
+  font-weight: 600;
+  font-size: 14px;
+  text-align: center;
+}
+
+.exp-container {
+  flex: 1;
+}
+
+.exp-container h3 {
+  font-size: 24px;
+  color: #c40000;
+  margin-bottom: 10px;
+}
+
+.exp-cards {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.exp-card {
+  background: linear-gradient(135deg, #ffe4e1, #fff0f5);
+  padding: 15px;
+  border-radius: 15px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+  transition: 0.3s;
+}
+
+.exp-card:hover {
+  transform: translateY(-5px) scale(1.02);
+  box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+}
+
+.about-right img {
+  width: 400px;
+  border-radius: 25px;
+  box-shadow: 0 25px 50px rgba(0,0,0,0.2);
+  object-fit: cover;
+}
+
+/* ADAPTIVE ABOUT */
+@media (max-width: 1024px) {
+  .about-container {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  .about-bottom {
+    flex-direction: column;
+    gap: 20px;
+  }
+  .about-right img {
+    width: 300px;
+  }
+}
+
+@media (max-width: 768px) {
+  .about-right img {
+    width: 220px;
+  }
+}
+

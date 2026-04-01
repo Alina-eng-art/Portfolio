@@ -1,6 +1,9 @@
 <template>
-  <Navbar />       <!-- единственный Navbar -->
-  <router-view />  <!-- сюда подставляются страницы -->
+  <!-- Navbar всегда сверху -->
+  <Navbar />
+
+  <!-- Здесь подставляются страницы через маршруты -->
+  <router-view />
 </template>
 
 <script setup>
