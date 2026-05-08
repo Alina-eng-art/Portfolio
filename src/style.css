@@ -1,4 +1,4 @@
-/* ========================= ШРИФТ ========================= */
+/* подключаем кастомный шрифт benzin */
 @font-face {
   font-family: 'Benzin';
   src: url('./assets/fonts/Benzin-Regular.ttf') format('truetype');
@@ -6,14 +6,14 @@
   font-style: normal;
 }
 
-/* ========================= RESET ========================= */
+/* убираем все стандартные отступы */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-
 }
 
+/* базовые стили для html и body */
 html, body {
   width: 100%;
   min-height: 100vh;
@@ -30,17 +30,14 @@ html, body {
   overscroll-behavior: none; 
 }
 
-
-
+/* стили для изображений */
 img {
   max-width: 100%;
   height: auto;
   display: block;
 }
 
-
-
-/* 🔥 Переключатель языка */
+/* контейнер переключателя языка */
 .lang-switch {
   display: flex;
   gap: 5px;
@@ -52,7 +49,7 @@ img {
   backdrop-filter: blur(10px);
 }
 
-/* кнопки */
+/* стили кнопок языка */
 .lang-switch button {
   border: none;
   padding: 6px 14px;
@@ -67,12 +64,12 @@ img {
   transition: all 0.3s ease;
 }
 
-/* hover */
+/* эффект при наведении на кнопку */
 .lang-switch button:hover {
   color: white;
 }
 
-/* АКТИВНАЯ */
+/* активная кнопка языка */
 .lang-switch button.active {
   background: linear-gradient(135deg, #5f2cff, #a855f7);
   color: white;
@@ -80,8 +77,7 @@ img {
   box-shadow: 0 4px 15px rgba(168, 85, 247, 0.4);
 }
 
-/* ================= HERO СЕКЦІЯ ================= */
-/* 🔹 головний блок першого екрану */
+/* основной блок героя */
 .hero {
   position: relative;
   z-index: 1;
@@ -94,7 +90,7 @@ img {
   overflow: hidden;
 }
 
-/* 🔹 світловий фон позаду */
+/* световой фон позади героя */
 .hero::before {
   content: "";
   position: absolute;
@@ -108,7 +104,7 @@ img {
   z-index: 0;
 }
 
-/* 🔹 контейнер контенту */
+/* контейнер контента героя */
 .hero-container {
   width: 90%;
   max-width: 1200px;
@@ -118,13 +114,12 @@ img {
   gap: 40px;
 }
 
-/* ================= TEXT ================= */
-/* 🔹 блок тексту */
+/* блок с текстом героя */
 .hero-content {
   max-width: 600px;
 }
 
-/* 🔹 заголовок */
+/* заголовок героя */
 .hero-content h1 {
   position: relative;
   margin-top: 100px;
@@ -135,7 +130,7 @@ img {
   text-shadow: 0 5px 20px rgba(0, 0, 0, 0.3);
 }
 
-/* 🔹 підзаголовок */
+/* подзаголовок */
 .subtitle {
   min-height: 24px;
   position: relative;
@@ -144,7 +139,7 @@ img {
   color: #cbd5e1;
 }
 
-/* 🔹 опис */
+/* описание */
 .description {
   position: relative;
   left: -100px;
@@ -153,16 +148,14 @@ img {
   color: #e2e8f0;
 }
 
-/* ================= BUTTON ================= */
-
-/* 🔹 контейнер кнопок */
+/* контейнер кнопок */
 .hero-buttons {
   display: flex;
   gap: 15px;
   margin-top: 20px;
 }
 
-/* 🔹 основна кнопка */
+/* основная кнопка */
 .hero-btn {
   font-family: 'Inter', sans-serif;
   letter-spacing: 0.5px;
@@ -178,7 +171,7 @@ img {
   transition: 0.3s;
 }
 
-/* 🔹 друга кнопка */
+/* вторая кнопка */
 .hero-btnn {
   font-family: 'Inter', sans-serif;
   letter-spacing: 0.5px;
@@ -194,15 +187,14 @@ img {
   transition: 0.3s;
 }
 
-/* 🔹 hover ефект */
+/* эффект наведения на кнопки */
 .hero-btn:hover,
 .hero-btnn:hover {
   transform: translateY(-3px);
   box-shadow: 0 10px 30px rgba(0, 180, 255, 0.25);
 }
 
-/* ================= STATUS ================= */
-/* 🔹 статус онлайн */
+/* статус онлайн */
 .status {
   margin-top: 30px;
   color: #38bdf8;
@@ -211,7 +203,7 @@ img {
   gap: 8px;
 }
 
-/* 🔹 зелена точка */
+/* зелена точка статуса */
 .dot {
   width: 8px;
   height: 8px;
@@ -220,8 +212,7 @@ img {
   box-shadow: 0 0 10px #22c55e;
 }
 
-/* ================= TECH STACK ================= */
-/* 🔹 список технологій */
+/* список технологий */
 .tech-stack {
   margin-top: 20px;
   display: flex;
@@ -229,7 +220,7 @@ img {
   flex-wrap: wrap;
 }
 
-/* 🔹 елемент технології */
+/* элемент технологии */
 .tech-stack span {
   padding: 6px 12px;
   border-radius: 20px;
@@ -241,14 +232,13 @@ img {
   transition: 0.3s;
 }
 
-/* 🔹 hover */
+/* эффект наведения на технологии */
 .tech-stack span:hover {
   transform: translateY(-3px);
   box-shadow: 0 5px 20px rgba(0, 180, 255, 0.3);
 }
 
-/* ================= HERO IMAGE ================= */
-/* 🔹 зона з карточками */
+/* зона с карточками кода */
 .hero-image {
   position: relative;
   width: 650px;
@@ -256,8 +246,7 @@ img {
   z-index: 1;
 }
 
-/* ================= CODE CARDS ================= */
-/* 🔹 карточка з кодом */
+/* карточка с кодом */
 .code-card {
   position: absolute;
   width: 260px;
@@ -282,7 +271,7 @@ img {
   animation: float 6s ease-in-out infinite;
 }
 
-/* 🔹 glow ефект */
+/* glow эффект для карточки */
 .code-card::after {
   content: "";
   position: absolute;
@@ -295,7 +284,7 @@ img {
   z-index: -1;
 }
 
-/* 🔹 головна карточка */
+/* главная карточка */
 .code-card.main {
   width: 320px;
   top: 360px;
@@ -303,39 +292,38 @@ img {
   z-index: 2;
 }
 
-/* 🔹 позиції карточок */
+/* позиции остальных карточек */
 .card1 { top: 150px; right: -100px; }
 .card2 { top: 200px; right: 250px; }
 .card3 { bottom: 350px; right: -300px; }
 .card4 { top: 40px; right: -200px; }
 .card5 { top: -40px; right: 170px; }
 
-/* 🔹 hover */
+/* эффект наведения на карточку */
 .code-card:hover {
   transform: translateY(-10px) scale(1.05);
 }
 
-/* 🔹 анімація плавання */
+/* анимация плавания карточек */
 @keyframes float {
   0%, 100% { transform: translateY(0); }
   50% { transform: translateY(-15px); }
 }
 
-/* 🔹 стиль коду */
+/* стиль кода в карточке */
 .code-card code {
   color: #7dd3fc;
   white-space: pre-wrap;
 }
 
-/* 🔹 прозорі карточки */
+/* прозрачные карточки */
 .code-card.card2,
 .code-card.card3,
 .code-card.card4 {
   opacity: 0.45 !important;
 }
 
-/* ================= MINI PROJECTS ================= */
-/* 🔹 блок міні проектів */
+/* блок мини проектов */
 .project-mini {
   position: absolute;
   bottom: 0px;
@@ -346,7 +334,7 @@ img {
   z-index: 20;
 }
 
-/* 🔹 карточка проекту */
+/* карточка мини проекта */
 .mini-card {
   padding: 15px 20px;
   border-radius: 14px;
@@ -364,20 +352,19 @@ img {
   transition: 0.5s ease;
 }
 
+/* мини карточка видна */
 .mini-card.show {
   opacity: 1;
   transform: translateY(0);
 }
 
-/* 🔹 hover */
+/* эффект наведения на мини карточку */
 .mini-card:hover {
   transform: translateY(-5px) scale(1.03);
   box-shadow: 0 10px 30px rgba(0, 180, 255, 0.25);
 }
 
-/* ================= АНІМАЦІЇ ================= */
-
-/* 🔹 анімація заголовка */
+/* анимация заголовка */
 .title-line {
   display: inline-block;
   opacity: 0;
@@ -387,18 +374,18 @@ img {
 .title-line.left { transform: translateX(-150px); }
 .title-line.right { transform: translateX(150px); }
 
-/* 🔹 запуск */
+/* когда сайт видно, заголовок появляется */
 .site-visible .title-line {
   opacity: 1;
   transform: translateX(0);
 }
 
-/* 🔹 затримки */
+/* задержки для каждого слова */
 .site-visible .title-line:nth-of-type(1) { transition-delay: 0.2s; }
 .site-visible .title-line:nth-of-type(2) { transition-delay: 0.5s; }
 .site-visible .title-line:nth-of-type(3) { transition-delay: 0.8s; }
 
-/* 🔹 fade */
+/* плавное появление с размытием */
 .fade-in {
   opacity: 0;
   filter: blur(10px);
@@ -412,7 +399,7 @@ img {
   transform: translateY(0);
 }
 
-/* 🔹 карточки поява */
+/* появление карточек кода */
 .code-card {
   opacity: 0;
   transform: translateY(80px) scale(0.9);
@@ -423,20 +410,14 @@ img {
   transform: translateY(0) scale(1);
 }
 
-/* ===================================================== */
-/* 🖥 1400+ */
-/* ===================================================== */
-
+/* адаптация для десктопа большой экран */
 @media (min-width: 1400px) {
   .hero-content h1 {
     font-size: 72px;
   }
 }
 
-/* ===================================================== */
-/* 💻 1200px */
-/* ===================================================== */
-
+/* адаптация для экрана 1200px */
 @media (max-width: 1200px) {
 
   .hero-content h1 {
@@ -453,10 +434,7 @@ img {
   }
 }
 
-/* ===================================================== */
-/* 💻 1100px */
-/* ===================================================== */
-
+/* адаптация для экрана 1100px */
 @media (max-width: 1100px) {
 
   .hero-content h1 {
@@ -468,14 +446,9 @@ img {
   }
 }
 
-/* ===================================================== */
-/* ===================================================== */
-/* 💥 ПОЛНЫЙ СБРОС ПРАВОЙ ЧАСТИ */
-/* ===================================================== */
-
+/* полный сброс правой части при 1000px */
 @media (max-width: 1000px) {
 
-  /* 💥 УБИРАЕМ ВСЕ absolute */
   .hero-image,
   .code-card,
   .project-mini {
@@ -487,7 +460,6 @@ img {
     transform: none !important;
   }
 
-  /* 💥 ДЕЛАЕМ КОЛОНКУ */
   .hero-image {
     display: flex;
     flex-direction: column;
@@ -496,14 +468,12 @@ img {
     margin-top: 30px;
   }
 
-  /* 💥 КОД КАРТОЧКИ */
   .code-card {
     width: 90%;
     max-width: 320px;
     margin: 10px auto;
   }
 
-  /* 💥 ПРОЕКТЫ ПОД НИМИ */
   .project-mini {
     margin-top: 20px;
 
@@ -521,12 +491,8 @@ img {
     text-align: center;
   }
 }
-/* ===================================== */
-/* 📱 ТОЛЬКО ЦЕНТР ТЕКСТА (БЕЗ ЛОМАНИЯ) */
-/* ===================================== */
 
-/* ===== ТОЛЬКО АДАПТИВ (ничего не ломает) ===== */
-
+/* адаптация для 900px центрирование текста */
 @media (max-width: 900px) {
 
   .hero-container {
@@ -549,10 +515,8 @@ img {
     padding-left: 0 !important;
     padding-right: 0 !important;
 
-    position: relative; /* ОБЯЗАТЕЛЬНО */
+    position: relative;
   }
-
-  /* ===== ВОТ ТУТ ГЛАВНОЕ ===== */
 
   .hero-content h1 {
     position: relative;
@@ -575,8 +539,6 @@ img {
     text-align: center;
   }
 
-  /* ===== КНОПКИ И ОСТАЛЬНОЕ НЕ ТРОГАЕМ ===== */
-
   .hero-buttons,
   .status,
   .tech-stack {
@@ -587,19 +549,13 @@ img {
 
 }
 
-
-
-/* ===================================================== */
-/* 📱 768px */
-/* ===================================================== */
-
+/* адаптация для 768px */
 @media (max-width: 768px) {
 
   .hero-content h1 {
     font-size: 32px;
   }
 
-  /* 💥 оставляем 1 карточку */
   .code-card {
     display: none;
   }
@@ -617,10 +573,7 @@ img {
   }
 }
 
-/* ===================================================== */
-/* 📱 480px */
-/* ===================================================== */
-
+/* адаптация для 480px */
 @media (max-width: 480px) {
 
   .hero-content h1 {
@@ -639,10 +592,7 @@ img {
   }
 }
 
-/* ===================================================== */
-/* 📱 360px */
-/* ===================================================== */
-
+/* адаптация для 360px */
 @media (max-width: 360px) {
 
   .hero-content h1 {
@@ -654,10 +604,7 @@ img {
   }
 }
 
-/* ========================= ABOUT ========================= */
-
-
-
+/* секция about */
 .about {
   padding-top: 60px;
   min-height: 100svh;
@@ -667,6 +614,7 @@ img {
   scroll-snap-align: none;
 }
 
+/* контейнер с двумя колонками */
 .about-container {
   display: grid;
   grid-template-columns: 1.2fr 0.8fr;
@@ -676,7 +624,7 @@ img {
   margin: 0 auto;
 }
 
-/* Ліва колонка */
+/* лев��я колонка */
 .about-left {
   position: relative;
   display: flex;
@@ -686,6 +634,7 @@ img {
   padding-left: 30px;
 }
 
+/* вертикальная линия слева */
 .about-left::before {
   content: "";
   position: absolute;
@@ -705,11 +654,12 @@ img {
   border-radius: 10px;
 }
 
+/* текст в about */
 .about-text p {
   color: rgba(226, 232, 240, 0.85);
 }
 
-/* Заголовок */
+/* заголовок */
 .about-text h2 {
   font-size: 40px;
   color: #ffffff;
@@ -717,7 +667,7 @@ img {
   font-weight: 700;
 }
 
-/* Лінія під заголовком */
+/* линия под заголовком */
 .about-text h2::after {
   content: '';
   display: block;
@@ -733,7 +683,7 @@ img {
   border-radius: 2px;
 }
 
-/* Підзаголовок */
+/* подзаголовок */
 .about-subtitle {
   color: #38bdf8;
   margin-bottom: 15px;
@@ -741,7 +691,7 @@ img {
   letter-spacing: 1px;
 }
 
-/* Текст */
+/* текст */
 .about-text p {
   font-size: 17px;
   line-height: 1.8;
@@ -749,9 +699,7 @@ img {
   max-width: 500px;
 }
 
-
-/* ========================= НАВИЧКИ ========================= */
-
+/* контейнер навыков */
 .skills-container {
   position: relative;
   display: flex;
@@ -774,13 +722,13 @@ img {
   color: #ffffff;
 }
 
-/* Заголовки */
+/* заголовки блоков навыков */
 .skill-block h4 {
   color: #38bdf8;
   margin-bottom: 10px;
 }
 
-/* Бари */
+/* полоса навыка */
 .skill-bar {
   margin-bottom: 10px;
 }
@@ -790,6 +738,7 @@ img {
   box-shadow: 0 0 15px rgba(192, 132, 252, 0.8);
 }
 
+/* текст навыка */
 .skill-bar span {
   display: block;
   margin-bottom: 5px;
@@ -797,6 +746,7 @@ img {
   color: #e9d5ff;
 }
 
+/* фон полосы навыка */
 .bar {
   width: 100%;
   height: 8px;
@@ -806,6 +756,7 @@ img {
   overflow: hidden;
 }
 
+/* заполнение полосы */
 .fill {
   height: 100%;
 
@@ -821,13 +772,14 @@ img {
   filter: brightness(1.2);
 }
 
-/* Soft Skills */
+/* мягкие навыки */
 .skills {
   display: flex;
   gap: 10px;
   flex-wrap: wrap;
 }
 
+/* элемент мягкого навыка */
 .skill {
   display: inline-block;
   padding: 6px 14px;
@@ -847,8 +799,7 @@ img {
   box-shadow: 0 5px 20px rgba(0, 180, 255, 0.3);
 }
 
-/* ========================= ПРАВА КОЛОНКА ========================= */
-
+/* контейнер справа */
 .about-right {
   display: flex;
   flex-direction: column;
@@ -856,6 +807,7 @@ img {
   gap: 30px;
 }
 
+/* фото профиля */
 .about-right img {
   width: 100%;
   max-width: 380px;
@@ -870,8 +822,7 @@ img {
   box-shadow: 0 10px 30px rgba(0, 180, 255, 0.25);
 }
 
-/* ========================= ДОСВІД ========================= */
-
+/* контейнер опыта */
 .exp-container {
   width: 100%;
   margin-top: 20px;
@@ -892,17 +843,18 @@ img {
   margin-top: -5px;
 }
 
+/* сетка карточек опыта */
 .exp-cards {
   display: grid;
   gap: 20px;
 }
 
+/* карточка опыта */
 .exp-card {
   position: relative;
   padding: 15px;
   border-radius: 18px;
 
-  /* стекло */
   background: rgba(255, 255, 255, 0.05);
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
@@ -941,10 +893,7 @@ img {
   transition: all 0.3s ease;
 }
 
-
-/* ========================= АДАПТАЦИЯ ========================= */
-
-/* планшет */
+/* адаптация для планшета */
 @media (max-width: 1200px) {
   .about-container {
     grid-template-columns: 1fr;
@@ -956,7 +905,7 @@ img {
   }
 }
 
-/* мобилка */
+/* адаптация для мобилки */
 @media (max-width: 768px) {
   .about {
     padding: 80px 20px;
@@ -975,7 +924,7 @@ img {
   }
 }
 
-/* маленькие экраны */
+/* адаптация для маленьких экранов */
 @media (max-width: 480px) {
   .about-text h2 {
     font-size: 26px;
@@ -990,8 +939,7 @@ img {
   }
 }
 
-/* ========================= PORTFOLIO ========================= */
-
+/* секция портфолио */
 .portfolio-section {
   padding: 80px 20px;
   min-height: 100svh;
@@ -1004,7 +952,7 @@ img {
   scroll-snap-align: none;
 }
 
-/* ЗАГОЛОВОК */
+/* заголовок портфолио */
 .portfolio-section h2 {
   font-size: 40px;
   color: #ffffff;
@@ -1028,6 +976,7 @@ img {
   border-radius: 2px;
 }
 
+/* подзаголовок портфолио */
 .portfolio-subtitle {
   text-align: center;
   color: rgba(56, 189, 248, 0.8);
@@ -1047,8 +996,7 @@ img {
   }
 }
 
-/* ================= TABS ================= */
-
+/* контейнер табов */
 .tabs {
   display: flex;
   gap: 6px;
@@ -1064,6 +1012,7 @@ img {
   margin: 30px auto;
 }
 
+/* кнопки табов */
 .tabs button {
   padding: 10px 20px;
   border: none;
@@ -1082,6 +1031,7 @@ img {
   color: white;
 }
 
+/* активная кнопка таба */
 .tabs button.active {
   background: linear-gradient(135deg,
       rgba(59, 130, 246, 0.8),
@@ -1097,6 +1047,7 @@ img {
   font-weight: 600;
 }
 
+/* иконка таба */
 .tab-icon {
   width: 16px;
   height: 16px;
@@ -1117,8 +1068,7 @@ img {
   stroke: white;
 }
 
-/* ================= CERTIFICATES ================= */
-
+/* сетка сертификатов */
 .certificates-grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -1127,6 +1077,7 @@ img {
   margin: 0 auto 40px;
 }
 
+/* карточка сертификата */
 .cert-card {
   display: flex;
   align-items: center;
@@ -1150,6 +1101,7 @@ img {
     0 0 20px rgba(56, 189, 248, 0.3);
 }
 
+/* номер сертификата */
 .cert-number {
   min-width: 40px;
   height: 40px;
@@ -1165,6 +1117,7 @@ img {
   font-weight: bold;
 }
 
+/* информация сертификата */
 .cert-info h4 {
   color: white;
   font-size: 14px;
@@ -1176,8 +1129,7 @@ img {
   color: #94a3b8;
 }
 
-/* STACK */
-
+/* заголовок стека */
 .stack-title {
   margin: 40px 0 20px;
   color: #38bdf8;
@@ -1187,6 +1139,7 @@ img {
   opacity: 0.8;
 }
 
+/* сетка технологий */
 .stack-grid {
   display: flex;
   flex-wrap: wrap;
@@ -1197,6 +1150,7 @@ img {
   margin: 0 auto;
 }
 
+/* контейнер стека */
 .tech-wrapper {
   width: 100%;
   max-width: 1000px;
@@ -1204,6 +1158,7 @@ img {
   text-align: center;
 }
 
+/* карточка технологии */
 .tech-card {
   width: 120px;
   height: 120px;
@@ -1235,7 +1190,7 @@ img {
   box-shadow: 0 10px 30px rgba(56, 189, 248, 0.25);
 }
 
-/* GRID */
+/* сетка портфолио */
 .portfolio-grid {
   display: grid;
   gap: 30px;
@@ -1243,8 +1198,7 @@ img {
   margin: 0 auto;
 }
 
-/* ========================= CARD ========================= */
-
+/* карточка портфолио */
 .portfolio-card {
   display: flex;
   flex-direction: column;
@@ -1274,6 +1228,7 @@ img {
     0 0 25px rgba(56, 189, 248, 0.4);
 }
 
+/* изображение в карточке */
 .portfolio-card img {
   width: 100%;
   height: 160px;
@@ -1285,6 +1240,7 @@ img {
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
 }
 
+/* заголовок карточки */
 .portfolio-card h3 {
   color: #fff;
   font-size: 18px;
@@ -1292,12 +1248,14 @@ img {
   margin-bottom: 5px;
 }
 
+/* описание карточки */
 .portfolio-card p {
   font-size: 14px;
   color: rgba(226, 232, 240, 0.8);
   margin-bottom: 10px;
 }
 
+/* технологии проекта */
 .tech {
   display: inline-block;
   width: fit-content;
@@ -1314,6 +1272,7 @@ img {
   top: -15px;
 }
 
+/* контейнер кнопок карточки */
 .buttons {
   display: flex;
   justify-content: center;
@@ -1332,6 +1291,7 @@ button {
   transition: all 0.3s ease;
 }
 
+/* кнопка действия */
 .hero-btn1 {
   margin-top: 25px;
   padding: 14px 30px;
@@ -1351,12 +1311,14 @@ button {
   box-shadow: 0 10px 30px rgba(0, 180, 255, 0.25);
 }
 
+/* кнопка деталей */
 .details {
   background: transparent;
   color: white;
   transform: translateY(6px);
 }
 
+/* кнопка github */
 .github {
   background: linear-gradient(135deg, #0a2a4a, #0f3b6d);
   color: white;
@@ -1367,8 +1329,7 @@ button {
   box-shadow: 0 10px 30px rgba(0, 180, 255, 0.25);
 }
 
-/* ========================= CTA ========================= */
-
+/* блок call to action */
 .portfolio-cta {
   margin-top: 50px;
   text-align: center;
@@ -1378,38 +1339,35 @@ button {
   color: rgba(226, 232, 240, 0.8);
 }
 
-/* ========================= МОЯ АДАПТАЦИЯ ========================= */
-
-/* десктоп */
+/* адаптация для десктопа */
 @media (min-width: 1200px) {
   .portfolio-grid {
     grid-template-columns: repeat(3, 1fr);
   }
 }
 
-/* 1000px — В РЯД (как ты хотела) */
+/* адаптация для 1200px */
 @media (max-width: 1200px) {
   .portfolio-grid {
     grid-template-columns: repeat(3, 1fr);
   }
 }
 
-/* планшет */
+/* адаптация для планшета */
 @media (max-width: 900px) {
   .portfolio-grid {
     grid-template-columns: repeat(2, 1fr);
   }
 }
 
-/* телефон */
+/* адаптация для телефона */
 @media (max-width: 600px) {
   .portfolio-grid {
     grid-template-columns: 1fr;
   }
 }
 
-/* ========================= CONTACT ========================= */
-/* ===== SECTION ===== */
+/* секция контактов */
 .c-contact {
   position: relative;
   padding-top: 85px;
@@ -1419,8 +1377,7 @@ button {
   color: white;
 }
 
-
-/* ===== TITLE ===== */
+/* заголовок контактов */
 .c-title {
   display: flex;
   align-items: center;
@@ -1435,17 +1392,17 @@ button {
   transition: all 0.8s ease;
 }
 
-/* когда появляется */
+/* когда заголовок появляется */
 .c-title.c-show {
   opacity: 1;
   transform: translateY(0);
 }
 
-/* линии */
+/* линии вокруг заголовка */
 .c-title::before,
 .c-title::after {
   content: "";
-  flex: 1; /* 🔥 растягиваются по бокам */
+  flex: 1;
   height: 2px;
 
   background: linear-gradient(
@@ -1458,18 +1415,19 @@ button {
   opacity: 0.6;
 }
 
-
+/* цвет выделенного текста */
 .c-title span {
   color: #00d9ff;
   text-shadow: 0 0 12px rgba(0, 217, 255, 0.8);
 }
 
+/* подзаголовок контактов */
 .c-sub {
   opacity: 0.6;
   margin-bottom: 60px;
 }
 
-/* ===== MAIN WRAPPER ===== */
+/* основной контейнер */
 .c-wrapper {
   display: flex;
   align-items: flex-start;
@@ -1489,7 +1447,7 @@ button {
     inset 0 0 60px rgba(0, 150, 255, 0.05);
 }
 
-/* ===== LEFT SIDE ===== */
+/* левая часть контактов */
 .c-left {
   gap: 25px;
   display: flex;
@@ -1503,12 +1461,14 @@ button {
   margin-bottom: 15px;
 }
 
+/* описание левой части */
 .c-desc {
   opacity: 0.7;
   line-height: 1.6;
   margin-bottom: 25px;
 }
 
+/* контейнер информации */
 .c-info {
   margin: 25px 0;
   display: flex;
@@ -1516,12 +1476,14 @@ button {
   gap: 18px;
 }
 
+/* элемент информации */
 .c-info-item {
   display: flex;
   align-items: center;
   gap: 14px;
 }
 
+/* иконка информации */
 .c-info-icon {
   width: 36px;
   height: 36px;
@@ -1543,30 +1505,34 @@ button {
   height: 16px;
 }
 
+/* текст информации */
 .c-info-text {
   display: flex;
   flex-direction: column;
 }
 
+/* метка информации */
 .c-label {
   font-size: 11px;
   letter-spacing: 1px;
   color: rgba(255, 255, 255, 0.4);
 }
 
+/* значение информации */
 .c-info-text p {
   font-size: 14px;
   color: white;
   margin: 2px 0 0;
 }
 
-/* ===== SOCIALS ===== */
+/* контейнер социальных сетей */
 .c-socials {
   display: flex;
   gap: 14px;
   margin: 25px 0;
 }
 
+/* ссылка на соцсеть */
 .c-socials a {
   width: 42px;
   height: 42px;
@@ -1600,7 +1566,7 @@ button {
   transform: translateY(-2px);
 }
 
-/* AVAILABLE */
+/* блок доступности */
 .c-available-blue {
   margin-top: 25px;
   padding: 18px 22px;
@@ -1621,6 +1587,7 @@ button {
   text-align: left;
 }
 
+/* строка доступности */
 .c-available-line {
   display: flex;
   align-items: center;
@@ -1633,6 +1600,7 @@ button {
   margin-bottom: 6px;
 }
 
+/* текст доступности */
 .c-available-blue p {
   margin: 0;
   color: #9fdcff;
@@ -1640,6 +1608,7 @@ button {
   line-height: 1.5;
 }
 
+/* точка доступности */
 .c-dot-blue {
   width: 8px;
   height: 8px;
@@ -1660,14 +1629,14 @@ button {
   100% { transform: scale(1); opacity: 1; }
 }
 
-/* ===== RIGHT SIDE ===== */
+/* правая часть контактов */
 .c-right {
   display: flex;
   flex: 1.3;
   padding-top: 80px;
 }
 
-/* ===== FORM ===== */
+/* контейнер формы */
 .c-form {
   margin-top: -40px;
   display: flex;
@@ -1676,6 +1645,7 @@ button {
   gap: 20px;
 }
 
+/* поля ввода и текстовая область */
 .c-form input,
 .c-form textarea {
   padding: 16px 18px;
@@ -1690,11 +1660,13 @@ button {
   transition: 0.3s;
 }
 
+/* плейсхолдеры */
 .c-form input::placeholder,
 .c-form textarea::placeholder {
   color: rgba(255, 255, 255, 0.4);
 }
 
+/* фокус на полях */
 .c-form input:focus,
 .c-form textarea:focus {
   background: rgba(0, 150, 255, 0.08);
@@ -1704,12 +1676,14 @@ button {
     0 0 15px rgba(0, 150, 255, 0.6);
 }
 
+/* текстовая область */
 .c-form textarea {
   min-height: 180px;
   resize: none;
   flex: 1;
 }
 
+/* кнопка отправки формы */
 .c-form button {
   width: 100%;
   padding: 16px;
@@ -1732,14 +1706,13 @@ button {
   box-shadow: 0 0 25px rgba(0, 150, 255, 0.7);
 }
 
-/* ========================= НОРМ АДАПТАЦИЯ ========================= */
-
+/* адаптация для 900px */
 @media (max-width: 900px) {
   .c-wrapper {
     flex-direction: column;
     padding: 30px;
 
-    align-items: stretch; /* 🔥 растягивает блоки */
+    align-items: stretch;
   }
 
   .c-left,
@@ -1754,16 +1727,16 @@ button {
 
   .c-form {
     width: 100%;
-    height: 100%; /* 🔥 ключ */
+    height: 100%;
     
     padding: 20px;
     border-radius: 20px;
 
-    background: rgba(0, 120, 255, 0.05); /* как у тебя сверху */
+    background: rgba(0, 120, 255, 0.05);
   }
 
   .c-form textarea {
-    flex: 1; /* 🔥 растягивает вниз */
+    flex: 1;
   }
 
   .c-socials {
@@ -1771,10 +1744,7 @@ button {
   }
 }
 
-
-/* ========================= WELCOME OVERLAY ========================= */
-
-/* Головний оверлей (екран при загрузці) */
+/* оверлей при загрузке */
 .intro-overlay {
   position: fixed;
   inset: 0;
@@ -1793,7 +1763,7 @@ button {
   will-change: opacity, transform, filter;
 }
 
-/* Плавне зникнення */
+/* плавное исчезновение оверлея */
 .intro-overlay.force-hide {
   animation: smoothFadeReal 2.5s cubic-bezier(0.22, 1, 0.36, 1) forwards;
 }
@@ -1819,14 +1789,13 @@ button {
   }
 }
 
-
-/* ========================= ІКОНКИ ========================= */
-
+/* контейнер иконок */
 .intro-icons {
   display: flex;
   gap: 20px;
 }
 
+/* иконка */
 .intro-icon {
   width: 64px;
   height: 64px;
@@ -1856,7 +1825,7 @@ button {
   animation: iconFade 0.6s ease forwards;
 }
 
-/* hover ефект */
+/* эффект наведения на иконку */
 .intro-icon:hover {
   transform: translateY(-3px) scale(1.05);
 
@@ -1866,7 +1835,7 @@ button {
     inset 0 0 12px rgba(255, 255, 255, 0.08);
 }
 
-/* кольори іконок */
+/* цвета иконок */
 .intro-icon:nth-child(1) { color: #5df; }
 .intro-icon:nth-child(2) { color: #4de0ff; }
 .intro-icon:nth-child(3) { color: #6cf; }
@@ -1879,15 +1848,13 @@ button {
   filter: drop-shadow(0 0 6px rgba(0, 217, 255, 0.7));
 }
 
-
-/* ========================= ТЕКСТ ========================= */
-
+/* контейнер текста */
 .intro-text {
   text-align: center;
   margin-top: 20px;
 }
 
-/* рядки тексту */
+/* строки текста */
 .line {
   display: flex;
   justify-content: center;
@@ -1900,7 +1867,7 @@ button {
   color: rgba(255, 255, 255, 0.7);
 }
 
-/* великий текст */
+/* большой текст */
 .big span {
   font-size: 30px;
   font-weight: bold;
@@ -1916,7 +1883,7 @@ button {
     0 0 40px rgba(100, 180, 255, 0.25);
 }
 
-/* поява слів */
+/* появление слов */
 .line span {
   opacity: 0;
   transform: translateY(40px);
@@ -1928,9 +1895,7 @@ button {
   transform: translateY(0);
 }
 
-
-/* ========================= DEV CHIP ========================= */
-
+/* чип с текстом */
 .dev-chip {
   padding: 6px 14px;
   margin-top: 25px;
@@ -1960,14 +1925,14 @@ button {
   transform: translateY(0);
 }
 
-/* внутрішній блок */
+/* внутренний блок чипа */
 .chip-inner {
   display: flex;
   align-items: center;
   gap: 10px;
 }
 
-/* іконка */
+/* иконка чипа */
 .chip-icon {
   width: 18px;
   height: 18px;
@@ -1995,7 +1960,7 @@ button {
     0 0 12px #00b4ff;
 }
 
-/* текст */
+/* текст чипа */
 .chip-text {
   color: #d8f6ff;
   font-size: 13px;
@@ -2009,9 +1974,7 @@ button {
   animation: blink 1s infinite;
 }
 
-
-/* ========================= ПРОГРЕС ========================= */
-
+/* полоса прогресса */
 .progress {
   width: 220px;
   height: 3px;
@@ -2022,6 +1985,7 @@ button {
   overflow: hidden;
 }
 
+/* заполнение прогресса */
 .progress-bar {
   width: 0%;
   height: 100%;
@@ -2040,13 +2004,12 @@ button {
   transition: width 1.4s cubic-bezier(0.25, 0.8, 0.25, 1);
 }
 
-
-/* ========================= АНІМАЦІЇ ========================= */
-
+/* анимация мигания */
 @keyframes blink {
   50% { opacity: 0; }
 }
 
+/* анимация появления иконки */
 @keyframes iconFade {
   to {
     opacity: 1;
@@ -2054,9 +2017,7 @@ button {
   }
 }
 
-
-/* ========================= SITE ========================= */
-
+/* основной контейнер сайта */
 .site {
   opacity: 0;
   transition: opacity 1.2s ease;
@@ -2076,10 +2037,7 @@ body,
   background: radial-gradient(circle, #0b1a2a, #02060d);
 }
 
-
-/* ========================= АДАПТАЦІЯ ========================= */
-
-/* планшети */
+/* адаптация для планшета */
 @media (max-width: 900px) {
   .intro-icons {
     gap: 15px;
@@ -2100,7 +2058,7 @@ body,
   }
 }
 
-/* телефони */
+/* адаптация для телефона */
 @media (max-width: 500px) {
   .intro-icons {
     flex-wrap: wrap;
@@ -2131,12 +2089,7 @@ body,
   }
 }
 
-
-/* ========================= ГРАДІЄНТНИЙ ФОН ========================= */
-
-/* Основной фон:
-   - свет по центру
-   - плавный движущийся градиент */
+/* градиентный фон с движением */
 .gradient-bg {
   background:
     radial-gradient(circle at 50% 50%, rgba(0, 120, 255, 0.15), rgba(2, 6, 23, 1) 60%),
@@ -2146,24 +2099,18 @@ body,
       #0a2a4a,
       #020617);
 
-  /* делаем фон больше чтобы он двигался */
   background-size: 200% 200%, 400% 400%;
 
-  /* анимация движения */
   animation: gradientMove 12s ease infinite;
 
-  /* фон не двигается при скролле */
   background-attachment: fixed;
 }
 
-
-/* ========================= ОСНОВНАЯ АНИМАЦИЯ ========================= */
-
-/* начальное состояние (элемент скрыт) */
+/* начальное состояние элемента */
 .reveal {
-  opacity: 0;              /* невидим */
-  filter: blur(20px);      /* размытый */
-  transform: scale(0.8);   /* уменьшенный */
+  opacity: 0;
+  filter: blur(20px);
+  transform: scale(0.8);
 
   transition: all 0.8s cubic-bezier(0.2, 0.8, 0.2, 1);
 }
@@ -2173,34 +2120,30 @@ body,
   transform: translateY(-60px) scale(0.9);
 }
 
-
-/* ========================= НАПРАВЛЕНИЯ ========================= */
-
-/* сверху */
+/* направление сверху */
 .from-top {
   transform: translateY(-120px) scale(0.8);
 }
 
-/* сверху слева */
+/* направление сверху слева */
 .from-top-left {
   transform: translate(-120px, -120px) scale(0.8);
 }
 
-/* сверху справа */
+/* направление сверху справа */
 .from-top-right {
   transform: translate(120px, -120px) scale(0.8);
 }
 
-/* снизу слева */
+/* направление снизу слева */
 .from-bottom-left {
   transform: translate(-120px, 120px) scale(0.8);
 }
 
-/* снизу справа */
+/* направление снизу справа */
 .from-bottom-right {
   transform: translate(120px, 120px) scale(0.8);
 }
-
 
 /* когда элемент появляется */
 .reveal.show {
@@ -2209,10 +2152,7 @@ body,
   filter: blur(0);
 }
 
-
-/* ========================= CONTACT АНИМАЦИЯ ========================= */
-
-/* начальное состояние contact элементов */
+/* начальное состояние контактных элементов */
 .c-reveal {
   opacity: 0;
   transform: translateY(50px);
@@ -2229,24 +2169,19 @@ body,
   transform: translateX(120px);
 }
 
-/* ❗ было .c-show — но JS даёт .show
-   поэтому добавляем поддержку .show */
+/* поддержка показа контактных элементов */
 .c-reveal.show {
   opacity: 1;
   transform: translate(0);
 }
 
-/* оставляем на всякий случай */
+/* альтернативный класс показа */
 .c-show {
   opacity: 1;
   transform: translate(0);
 }
 
-
-
-
-/* ========================= АНИМАЦИЯ ФОНА ========================= */
-
+/* анимация движения фона */
 @keyframes gradientMove {
   0% {
     background-position: 0% 50%;
@@ -2261,19 +2196,15 @@ body,
   }
 }
 
-
-/* ========================= ПРОСТАЯ АНИМАЦИЯ ========================= */
-
-/* простой вылет снизу */
+/* простая анимация вылета снизу */
 .fade-up {
   opacity: 0;
   transform: translateY(60px);
   transition: all 0.8s ease;
 }
 
-/* когда появился */
+/* когда элемент появился */
 .fade-up.show {
   opacity: 1;
   transform: translateY(0);
 }
-
