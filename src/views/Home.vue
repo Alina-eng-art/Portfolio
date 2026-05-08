@@ -1,21 +1,24 @@
 <template>
-  <!-- Hero -->
-  <HeroSection />
+  <!-- главная секция с героем и анимациями -->
+  <HeroSection :showSite="props.showSite" />
 
-
-  <!-- Portfolio / Projects -->
-  <PortfolioGallery />
-
-  <!-- About -->
+  <!-- секция с информацией обо мне -->
   <About />
+  <!-- секция с портфолио и проектами -->
+  <PortfolioGallery />
+  <!-- секция с формой контактов -->
+  <ContactForm />
 </template>
 
 <script setup>
+// импортируем все основные секции страницы
 import HeroSection from '../components/HeroSection.vue'
-import PortfolioGallery from '../components/PortfolioGallery.vue'
 import About from '../components/About.vue'
-</script>
+import PortfolioGallery from '../components/PortfolioGallery.vue'
+import ContactForm from '../components/ContactForm.vue'
 
-<style scoped>
-/* Убираем обертку home */
-</style>
+// получаем пропс showSite из родительского компонента
+const props = defineProps({
+  showSite: Boolean // флаг что интро закончилось и сайт виден
+})
+</script>
