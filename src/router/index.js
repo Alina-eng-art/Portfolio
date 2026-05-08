@@ -4,14 +4,10 @@ import { createRouter, createWebHashHistory } from 'vue-router'
 // импортируем главный компонент
 import Home from '../views/Home.vue'
 
-// массив с маршрутами приложения
+// массив маршрутов
 const routes = [
   {
     path: '/',
-    redirect: '/home'
-  },
-  {
-    path: '/home',
     component: Home
   }
 ]
