@@ -8,7 +8,7 @@
     "build": "vite build",
     "preview": "vite preview",
     "predeploy": "npm run build",
-    "deploy": "gh-pages -d dist"
+    "deploy": "npm run build && git add dist -f && git commit -m 'Deploy' && git push"
   },
   "dependencies": {
     "gsap": "^3.14.2",
