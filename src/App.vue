@@ -1,7 +1,7 @@
 <template>
 
   <!-- интро экран с приветствием -->
-  <WelcomeIntro @finished="showSite = true" />
+  <WelcomeIntro @finished="finishIntro" />
 
   <!-- навигационная панель показывается после интро -->
   <Navbar v-if="showSite" />
@@ -20,15 +20,19 @@
 </template>
 
 <script setup>
-import { ref } from "vue";
+import { ref } from 'vue'
 
-// импортируем компоненты
-import Navbar from './components/Navbar.vue'
 import WelcomeIntro from './components/WelcomeIntro.vue'
+import Navbar from './components/Navbar.vue'
 import Footer from './components/Footer.vue'
 
-// переменная для отслеживания видимости сайта после интро
-const showSite = ref(false);
+// сайт скрыт пока идет интро
+const showSite = ref(false)
+
+// показать сайт после интро
+const finishIntro = () => {
+  showSite.value = true
+}
 </script>
 
 <style>

@@ -1,22 +1,36 @@
-// импортируем функции для создания маршрутизатора
 import { createRouter, createWebHashHistory } from 'vue-router'
 
-// импортируем главный компонент
 import Home from '../views/Home.vue'
+import About from '../components/About.vue'
+import PortfolioGallery from '../components/PortfolioGallery.vue'
+import ContactForm from '../components/ContactForm.vue'
 
-// массив маршрутов
 const routes = [
   {
     path: '/',
-    component: Home
+    component: Home,
+    name: 'home'
+  },
+  {
+    path: '/about',
+    component: About,
+    name: 'about'
+  },
+  {
+    path: '/portfolio',
+    component: PortfolioGallery,
+    name: 'portfolio'
+  },
+  {
+    path: '/contact',
+    component: ContactForm,
+    name: 'contact'
   }
 ]
 
-// создаём маршрутизатор
 const router = createRouter({
   history: createWebHashHistory(),
   routes
 })
 
-// экспортируем маршрутизатор
 export default router

@@ -9,16 +9,15 @@
       </div>
 
       <!-- навигационные ссылки -->
-      <nav :class="['nav-links', { open: isOpen }]">
-           <a href="#home">{{ t().nav.home }}</a>
-           <a href="#about">{{ t().nav.about }}</a>
-           <a href="#portfolio">{{ t().nav.projects }}</a>
-           <a href="#contact">{{ t().nav.contact }}</a>
-       </nav>
-
+<nav :class="['nav-links', { open: isOpen }]">
+  <router-link to="/">{{ t().nav.home }}</router-link>
+  <router-link to="/about">{{ t().nav.about }}</router-link>
+  <router-link to="/portfolio">{{ t().nav.projects }}</router-link>
+  <router-link to="/contact">{{ t().nav.contact }}</router-link>
+</nav>
+      
       <!-- переключатель языков -->
       <div class="lang-switch">
-        <!-- кнопка для английского языка -->
         <button 
           :class="{ active: lang === 'en' }"
           @click="setLang('en')"
@@ -26,7 +25,6 @@
           EN
         </button>
 
-        <!-- кнопка для украинского языка -->
         <button 
           :class="{ active: lang === 'ua' }"
           @click="setLang('ua')"
@@ -52,14 +50,13 @@ export default {
 
   data() {
     return {
-      isOpen: false, // состояние меню бургера
-      lang, // текущий язык
-      t, // функция для получения переводов
-      isVisible: false // состояние видимости хедера при загрузке
+      isOpen: false,
+      lang,
+      t,
+      isVisible: false
     }
   },
 
-  // при загрузке компонента показываем хедер с анимацией
   mounted() {
     setTimeout(() => {
       this.isVisible = true
@@ -67,17 +64,21 @@ export default {
   },
 
   methods: {
-    // открыть/закрыть меню бургера
     toggleMenu() {
       this.isOpen = !this.isOpen
     },
-    // закрыть меню
     closeMenu() {
       this.isOpen = false
     },
-    // изменить язык
     setLang(l) {
       setLang(l)
+    },
+    scrollToSection(id) {
+      this.closeMenu()
+      const element = document.getElementById(id)
+      if (element) {
+        element.scrollIntoView({ behavior: 'smooth' })
+      }
     }
   }
 }
